@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Airtable & Figma Embed</title>
+  <style>
+    :root{--max-width:1200px;--gap:1rem}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;line-height:1.5;margin:0;background:#f7f7fb;color:#111}
+    .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+    h1{font-size:1.5rem;margin:0 0 .5rem}
+    p{margin:.25rem 0 1rem;color:#444}
+    .embeds{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+    @media(min-width:900px){.embeds{grid-template-columns:1fr 1fr}}
+    .embed{background:#fff;border:1px solid #e6e9ef;border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.03)}
+    .embed header{padding:.75rem 1rem;border-bottom:1px solid #f1f3f8;background:linear-gradient(180deg,rgba(255,255,255,.0),rgba(0,0,0,0.01));}
+    .embed header h2{margin:0;font-size:1rem}
+    .embed .frame{height:520px}
+    .embed iframe{width:100%;height:100%;border:0}
+    .note{font-size:.875rem;color:#666;margin-top:.5rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Airtable & Figma embed</h1>
+    <p>Template page that shows an Airtable view and a Figma file using embed iframes. Replace the <code>src</code> attributes below with your actual embed URLs.</p>
+
+    <div class="embeds">
+      <section class="embed">
+        <header>
+          <h2>Airtable</h2>
+        </header>
+        <div class="frame">
+          <!-- Replace the src below with your Airtable share/embed URL. Example: https://airtable.com/embed/shrXXXXXXXXX -->
+          <iframe src="https://airtable.com/embed/your_airtable_embed_url" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="note">Airtable embed docs: https://support.airtable.com/docs/embed-a-base-or-view</div>
+      </section>
+
+      <section class="embed">
+        <header>
+          <h2>Figma</h2>
+        </header>
+        <div class="frame">
+          <!-- Replace the src below with your Figma embed URL. Example: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/XXXXXXXXX -->
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/your_figma_file_url" allowfullscreen></iframe>
+        </div>
+        <div class="note">Figma embed docs: https://help.figma.com/hc/en-us/articles/360040317373-Share-and-publish-prototypes-and-design-files</div>
+      </section>
+    </div>
+
+    <p class="note">Tip: If you want the embeds to be responsive to content height, consider using postMessage resizing scripts provided by the embed providers or a library that supports iframe auto-resize.</p>
+  </div>
+</body>
+</html>
